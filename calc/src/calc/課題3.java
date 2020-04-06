@@ -7,7 +7,7 @@ public class 課題3 {
 
 	public static void main(String[] args) {
 
-		Scanner scanner =  new Scanner (System.in);
+		Scanner scanner = new Scanner(System.in);
 		int sum = 0;
 		for (int i = 0; i < 3; i++) {
 		System.out.print(i + 1 + "個目の数 = ");
