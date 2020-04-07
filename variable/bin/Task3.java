@@ -1,6 +1,5 @@
-package variable;
 
-public class Task3 {
+public class taskk3 {
 
 	public static void main(String[] args) {
 		int intNum = 219;
@@ -21,5 +20,7 @@ public class Task3 {
 	    System.out.println(b);    //364.2
 	    System.out.println(c);    //123456.0
 
+
 	}
+
 }
