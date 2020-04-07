@@ -16,7 +16,7 @@ public class Task3 {
 	    float b = (float) doubleNum;    //double を float に強制変換
 	    double c = longNum;     //long を double に変換
 	    
-	    System.out.println("変換語");
+	    System.out.println("変換後");
 	    System.out.println(a);    //219
 	    System.out.println(b);    //364.2
 	    System.out.println(c);    //123456.0
