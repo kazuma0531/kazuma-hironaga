@@ -9,18 +9,21 @@ public class Task2 {
 		int number = scanner.nextInt();
 	    int sum = 0;
 	    for(int i = 1; i <= number; i++) {	
-	    	if(number > i) {
+	    	if(number > i) {    //1～入力した数字を含まない数字まで
 	            System.out.print(i + " + ");
-	        }else{
+	        }else{    //入力した数字の処理
+	        	
 	            System.out.print(i);	
 	    	}
 	    	sum = i + sum;
 	    }
 	    System.out.print(" = " + sum);
 	    	
-	    	
 		scanner.close();
 	}
 
 }
-
+/*上記の想定結果
+ * 数字を入力してください: (数字を入力)
+ * (入力した数字までの足し算と合計)
+ */

@@ -9,6 +9,6 @@ public class Task2Java {
 		 */
 		System.out.println("hogehoge");
 	
-	System.out.println("hogehoge2");
+	    System.out.println("hogehoge2");
 	}
 }
