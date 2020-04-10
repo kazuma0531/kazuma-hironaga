@@ -11,21 +11,26 @@ public class Task6 {
 		    System.out.println("1から5までの数字を入力してください");
 		int a = scanner.nextInt();
 		
-	    if(a < 1) {           //0と負の整数を入力した場合
-    	    System.out.print(a + " -> unknown");           //出力結果
-	    }else if(a < 2) {    //1の整数を入力した場合
-			System.out.print(a + " -> Ⅰ");                //出力結果
-	    }else if(a < 3) {    //2の整数を入力した場合
-		    System.out.print(a +" -> Ⅱ");                 //出力結果
-	    }else if(a < 4) {    //3の整数を入力した場合
-	        System.out.print(a +" -> Ⅲ");                 //出力結果
-	    }else if(a < 5) {    //4の整数を入力した場合
-	        System.out.print(a +" -> Ⅳ");                 //出力結果
-	    }else if(a < 6) {    //5の整数を入力した場合
-	        System.out.print(a +" -> Ⅴ");                 //出力結果
-	    }else {              //6以上の整数を入力した場合
-		    System.out.print(a + " -> unknown");           //出力結果
-		scanner.close();
+	    switch(a) {          //0と負の整数を入力した場合
+	        case 1:
+	        	System.out.print(a + " -> Ⅰ");
+	        	break;
+	        case 2:
+	        	System.out.print(a + " -> Ⅱ");
+	        	break;
+	        case 3:
+	        	System.out.print(a + " -> Ⅲ");
+	        	break;
+	        case 4:
+	        	System.out.print(a + " -> Ⅳ");
+	        	break;
+	        case 5:
+	        	System.out.print(a + " -> Ⅴ");
+	        	break;                 
+	        default:
+		    	System.out.println(a + " -> unknown");       
+		        scanner.close();
+		        break;
 	    }
     }
 }

@@ -28,7 +28,8 @@ public class Task7 {
 	    	break;
 	    	default:
 	    	System.out.println("入力を確認してください");          //指定された文字列以外の入力の場合
-	    scanner.close();
+	        scanner.close();
+	        break;
 	    }
     }
 }

@@ -21,8 +21,8 @@ public class Task4 {
 			System.out.println("numBはnumAの約数ではありません");  //出力結果
 		}
 		}catch(ArithmeticException e){ //正の整数以外入力された場合
-	        System.out.println("正の数を入力してください");        //出力結果      
-		scanner.close();
+			System.out.println("正の数を入力してください"); 
+			scanner.close();
 		}
 	}
 }
