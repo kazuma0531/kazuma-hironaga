@@ -15,21 +15,27 @@ public class Task5 {
 		        System.out.println("numB: " + b);        //入力した数字が出力
 		    
 		    int c = scanner.nextInt();
-		        System.out.println("numA: " + c);        //入力した数字が出力
+		        System.out.println("numC: " + c);        //入力した数字が出力
 		        
-		    int max = a;
-		        System.out.println("最大値: " + a);
-		    if(max < b) {
-		    	System.out.println("最大値: " + b);
-		    if(max < c) {
-		    	System.out.println("最大値: " + c);
+		    
+		        
+		    if(a > b && a > c) {
+		    	System.out.println("最大値 : " + a);
+		    }else if(b > c && b > a)  {
+		    	System.out.println("最大値 : " + b);
+		    }else if(c > a && c > b) {
+		    	System.out.println("最大値 : " + c);
+		    
 		    	scanner.close();
-		    }
-		    }
+		    	
+		        
+		    
 
 		}
 
 	}
+}
+
 
 
 /*上記の想定結果
