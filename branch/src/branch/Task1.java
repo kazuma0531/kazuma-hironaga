@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task1 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 	
 		System.out.println("10以上の数字を入力してください ");
         int num = scanner.nextInt();
@@ -15,8 +15,9 @@ public class Task1 {
         }
         if(num > 9) {     //10以上の数を入力した場合
             System.out.println("値: " + num);          //入力した数字で結果が出力される。
-            scanner.close();
+        scanner.close();
         }
+        
 	}
 }
 

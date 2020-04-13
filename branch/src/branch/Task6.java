@@ -13,7 +13,7 @@ public class Task6 {
 		
 	    switch(a) {          //0と負の整数を入力した場合
 	        case 1:
-	        	System.out.print(a + " -> Ⅰ");
+	        	System.out.print(" -> Ⅰ");
 	        	break;
 	        case 2:
 	        	System.out.print(a + " -> Ⅱ");
@@ -27,12 +27,11 @@ public class Task6 {
 	        case 5:
 	        	System.out.print(a + " -> Ⅴ");
 	        	break;                 
-	        default:
-		    	System.out.println(a + " -> unknown");       
-		        scanner.close();
-		        break;
-	    }
+	    }  
+	    System.out.println(a + " -> unknown");
+	    scanner.close();
     }
+	
 }
 /*上記の想定結果
  * 1から5までの数字を入力してください

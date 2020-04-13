@@ -1,3 +1,4 @@
+// 課題3
 import java.util.Scanner;
 
 public class Task3 {
@@ -11,7 +12,6 @@ public class Task3 {
 		while(n > 0){    //入力した回数が0になるまで処理
 			a ++;    //ブロック内の処理が終了した後、変数aを+1で実行される
             n = n / 10;    //入力した整数を10で割る。
-	            
 		}
 		System.out.print("桁数: "  + a);
 		scanner.close();

@@ -15,8 +15,9 @@ public class Task2 {
 		}
 		if(num > 9) {     //10以上の数を入力した場合
 		    System.out.println("値: " + num);        //入力した数字で結果が出力される。
-		    scanner.close();
+		scanner.close();
 		}
+		
 	}
 }
 

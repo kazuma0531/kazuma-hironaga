@@ -12,8 +12,7 @@ public class Task2 {
 	    	if(number > i) {    //1～入力した数字を含まない数字まで
 	            System.out.print(i + " + ");
 	        }else{    //入力した数字の処理
-	        	
-	            System.out.print(i);	
+	        	System.out.print(i);	
 	    	}
 	    	sum = i + sum;
 	    }

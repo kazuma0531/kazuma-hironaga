@@ -1,3 +1,4 @@
+// 課題1
 import java.util.Scanner;
 
 public class Task1 {
@@ -7,16 +8,14 @@ public class Task1 {
 		Scanner scanner = new Scanner(System.in);
         System.out.print("数字を入力してください: " );
     
-    int number = scanner.nextInt();
-    int index = 0;
-    int sum = 0;
-    
-    while(index <= number) {    //0～入力した数字を処理
-    	sum += index;
-    	index++;                 //0～入力した数字を入力した数字まで足し算で処理
-    }
-    	System.out.print("1～" + number +"までの合計: " + sum);
-    	scanner.close();
+        int number = scanner.nextInt();
+	    int sum = 0;
+	    for(int i = 1; i <= number; i++) {	
+	    	sum = i + sum;
+	    }
+	    System.out.print("1～" + number + "までの合計: " + sum);
+	    	
+		scanner.close();
 	}
 }
 
