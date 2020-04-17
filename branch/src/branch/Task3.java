@@ -14,10 +14,9 @@ public class Task3 {
 		}else if(num < 0) {  //負の数を入力した場合
         	System.out.print("入力された数字は負の数です。");    //出力結果
 		}else if(num == 0) { //0の数を入力した場合
-			System.out.print("入力された数字は0の数です。");     //出力結果
-	    scanner.close();	
+			System.out.print("入力された数字は0の数です。");     //出力結果	
 		}
-		
+		scanner.close();
 	}
 }
 

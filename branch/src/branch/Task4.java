@@ -9,21 +9,20 @@ public class Task4 {
 		Scanner scanner = new Scanner(System.in);
 		
 		
-			System.out.print("numA: ");
+		System.out.print("numA: ");
 		int numA = scanner.nextInt();
 	       
-		    System.out.print("numB: ");
+		System.out.print("numB: ");
 		int numB = scanner.nextInt();
 	    
-		if(numA <= 0 | numB <= 0) {
+		if(numA <= 0 || numB <= 0) {
 			System.out.println("正の数を入力してください");
 		}else if(numA % numB == 0) {          //約数の場合
 			System.out.println("numBはnumAの約数です");            //出力結果
 		}else{ 
 			System.out.println("numBはnumAの約数ではありません");  //出力結果
-		
-		scanner.close();
 		}
+		scanner.close();
 	}
 }
 /*上記の想定結果
