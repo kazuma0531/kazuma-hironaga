@@ -1,26 +1,29 @@
-//課題 2
+//配列 課題 2
 public class Task2 {
 
 	public static void main(String[] args) {
-		int[] array = {7,6,5,4,3,2,1};
-		 for(int i = 0; i < array.length; i++) {
-			 if(array[i] > array[6]) {
-				    System.out.print(array[i] + ",");    //array[0]～[5]まで出力
-			 }else{
-					System.out.println(array[6]);    //array[6]を出力
-			 }
-		 }
-		 for(int i=array.length-1; i > 0; i--) {
-			 if(array[i] > array[6]) {
-				    System.out.print(array[i] + ",");    //配列arrayの内容を逆から出力
-		     }else{
-			        System.out.print(array[6] + ",");
-		     }
-		 }
-		            System.out.println(array[0]);
-
+		
+		int[] h = new int[7];
+		 
+		for(int i = 0; i < h.length; i++) {
+			 h[i] = 7 -i;
+		}
+		 
+		for(int j = 0; j < h.length; j++) {
+			if(j ==h.length -1) {
+				System.out.println(h[j]);	
+			}else{
+				System.out.print(h[j] + ",");
+			}
+		}
+		for(int k = h.length; k > 0 ;k--) {
+			if(k == 1) {
+				System.out.print(h[k-1]);
+			}else{
+			    System.out.print(h[k-1] + ",");
+			}
+		}
 	}
-
 }
 /* 上記の想定結果
  * 7,6,5,4,3,2,1
