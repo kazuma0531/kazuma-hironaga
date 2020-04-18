@@ -10,7 +10,7 @@ public class Task2 {
 		}
 		 
 		for(int j = 0; j < h.length; j++) {
-			if(j ==h.length -1) {
+			if(j == h.length -1) {
 				System.out.println(h[j]);	
 			}else{
 				System.out.print(h[j] + ",");
