@@ -2,7 +2,6 @@
 import java.util.Random;
 
 public class Task3 {
-
 	public static void main(String[] args) {
 		System.out.print("[");
 		Random rnd = new Random();
@@ -14,16 +13,16 @@ public class Task3 {
 		int max = n[0];
 		int min = n[0];
 		for(int i =0; i < n.length; i++) {
-			if(i < n.length -1) {    //配列[0]から[4]までの整数
+			if(i < n.length -1) {	//配列[0]から[4]までの整数
 				System.out.print(n[i] + ",");
-		    }else{    //[5]の整数
-			    System.out.println(n[i] + "]");
-		    }
+			}else{	//[5]の整数
+				System.out.println(n[i] + "]");
+			}
 			
-			if(max < n[i]) {	
+			if(max < n[i]) {
 				max = n[i];
 			}
-			if(min > n[i]) {	
+			if(min > n[i]) {
 				min = n[i];
 			}
 		}
