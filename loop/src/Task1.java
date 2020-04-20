@@ -14,7 +14,6 @@ public class Task1 {
 	    	sum = i + sum;
 	    }
 	    System.out.print("1～" + number + "までの合計: " + sum);
-	    	
 		scanner.close();
 	}
 }
