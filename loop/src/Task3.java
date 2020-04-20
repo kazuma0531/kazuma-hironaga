@@ -9,9 +9,9 @@ public class Task3 {
 		System.out.print("数字を入力してください: " );
 		int n = scanner.nextInt();
 		int a = 0;
-		while(n > 0){    //入力した回数が0になるまで処理
-			a ++;    //ブロック内の処理が終了した後、変数aを+1で実行される
-            n = n / 10;    //入力した整数を10で割る。
+		while(n > 0){	//入力した回数が0になるまで処理
+			a ++;	//ブロック内の処理が終了した後、変数aを+1で実行される
+			n = n / 10;	//入力した整数を10で割る。
 		}
 		System.out.print("桁数: "  + a);
 		scanner.close();

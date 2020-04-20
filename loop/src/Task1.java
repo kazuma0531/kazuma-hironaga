@@ -6,14 +6,14 @@ public class Task1 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("数字を入力してください: " );
-    
-        int number = scanner.nextInt();
-	    int sum = 0;
-	    for(int i = 1; i <= number; i++) {	
-	    	sum = i + sum;
-	    }
-	    System.out.print("1～" + number + "までの合計: " + sum);
+		System.out.print("数字を入力してください: " );
+	
+		int number = scanner.nextInt();
+		int sum = 0;
+		for(int i = 1; i <= number; i++) {	
+			sum = i + sum;
+		}
+		System.out.print("1～" + number + "までの合計: " + sum);
 		scanner.close();
 	}
 }
