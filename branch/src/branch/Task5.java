@@ -6,23 +6,23 @@ import java.util.Scanner;
 public class Task5 {
 
 	public static void main(String[] args) {
-	    Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 			
 		int a = scanner.nextInt();
-		System.out.println("numA: " + a);        //入力した数字が出力
+		System.out.println("numA: " + a);		//入力した数字が出力
 			
 		int b = scanner.nextInt();
-		System.out.println("numB: " + b);        //入力した数字が出力
-		    
+		System.out.println("numB: " + b);		//入力した数字が出力
+			
 		int c = scanner.nextInt();
-		System.out.println("numC: " + c);        //入力した数字が出力
-		        
+		System.out.println("numC: " + c);		//入力した数字が出力
+				
 		if(a > b && a > c) {
-		    System.out.println("最大値 : " + a);
+			System.out.println("最大値 : " + a);
 		}else if(b > c && b > a)  {
-		    System.out.println("最大値 : " + b);
+			System.out.println("最大値 : " + b);
 		}else if(c > a && c > b) {
-		    System.out.println("最大値 : " + c);
+			System.out.println("最大値 : " + c);
 		}
 		scanner.close();
 	}
