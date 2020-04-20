@@ -8,8 +8,8 @@ public class Task4 {
 		HashMap<String,ArrayList<Integer>> label = new HashMap<>() ;
 		ArrayList<Integer> gu = new ArrayList<>();    
 		ArrayList<Integer> ki = new ArrayList<>();
-		label.put("偶数: ",gu);    //ArrayList gu をmapで管理
-		label.put("奇数: ",ki);    //ArrayList ki をmapで管理
+		label.put("偶数: ", gu);    //ArrayList gu をmapで管理
+		label.put("奇数: ", ki);    //ArrayList ki をmapで管理
 		int [] arr =  {21,3,32,6,99,72,78,51,1,26,87,11,48,60,29,5,46,74,14,193,215,83};
 		
 		for(int i = 0; i < arr.length; i++) {
