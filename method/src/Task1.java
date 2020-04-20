@@ -2,19 +2,15 @@
 public class Task1 {
 
 	public static void main(String[] args) {
-		myProfile("コラボ");
-		int a = 30;
-		myProfile(a);
-		double b =178.0;
-		myProfile(b);
+		String a ="コラボ";
+		int b = 30;
+		double c =178.0;
+		
+		myProfile(a,b,c);
 	}
-	public static void myProfile(String name){
+	public static void myProfile(String name, int old, double hei ){
 		System.out.println("私の名前は" + name + "です。");
-	}
-	public static void myProfile(int old){
 		System.out.println("年齢は" + old + "歳です。");
-	}
-	public static void myProfile(double hei){
 		System.out.println("身長は" + hei + "cmです。");
 		System.out.println("よろしくお願いします。");
 	}
