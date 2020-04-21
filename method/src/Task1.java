@@ -2,9 +2,9 @@
 public class Task1 {
 
 	public static void main(String[] args) {
-		String a ="コラボ";
+		String a = "コラボ";
 		int b = 30;
-		double c =178.0;
+		double c = 178.0;
 		
 		myProfile(a,b,c);
 	}
