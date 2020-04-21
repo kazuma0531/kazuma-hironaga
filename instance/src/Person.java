@@ -1,8 +1,8 @@
 // インスタンスとクラス 課題1
 public class Person {
 	//属性(フィールド)
-	String name ="廣永 一馬";
-	int age = 24;
+	String name;
+	int age;
 	
 	public  void myProfile() {
 		System.out.println("私の名前は" + this.name + "です。");

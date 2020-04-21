@@ -2,6 +2,8 @@
 public class Task3 {
 	public static void main(String[] args) {
 		Person hiro = new Person();
+		hiro.name = "廣永 一馬";
+		hiro.age = 24;
 		
 		hiro.myProfile();
 	}
