@@ -8,7 +8,7 @@ public class Task6 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-			System.out.println("1から5までの数字を入力してください");
+		System.out.println("1から5までの数字を入力してください");
 		int a = scanner.nextInt();
 		
 		switch(a) {		  //0と負の整数を入力した場合
