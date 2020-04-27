@@ -16,11 +16,10 @@ public class Task4 {
 		 * ①文字を1つ入力した際に、"ABCDGOPQRSYZ"があった場合
 		 * ②文字を2つ以上入力して、かつ入力した文字が"ABCDGOPQRSYZ"連続で入力された場合(CDG)
 		 */
-		if(result != -1) {
-			System.out.println(search + "は" + input + "を含む");
-			//上記の条件に当てはまらなかった場合の処理
-		}else {
+		if(result < 0) {
 			System.out.println(search + "は" + input + "を含まない");
+		}else {
+			System.out.println(search + "は" + input + "を含む");
 		}
 		scanner.close();
 	}
