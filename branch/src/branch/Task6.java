@@ -13,7 +13,7 @@ public class Task6 {
 		
 		switch(a) {		  //0と負の整数を入力した場合
 			case 1:
-				System.out.print(" -> Ⅰ");
+				System.out.print(a + " -> Ⅰ");
 				break;
 			case 2:
 				System.out.print(a + " -> Ⅱ");
