@@ -10,12 +10,12 @@
 	SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy年MM月dd日");
 %>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>JSP KADAI</title>
 </head>
 <body>
 	<h1>訪問回数: <%= count++ %></h1>
 	
-	<p><% out.print("今日の日付: " + sdf1.format(now)); %><p>
+	<p>今日の日付: <% out.print(sdf1.format(now)); %><p>
 </body>
 </html>
 

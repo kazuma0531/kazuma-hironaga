@@ -5,7 +5,7 @@
 <html>
 <head>
 <%-- substractionメソッド --%>
-<%! int add(int a, int b){
+<%! int substraction(int a, int b){
 		return a - b;
 	}
 %>
@@ -14,8 +14,8 @@
 <title>JSP TASK</title>
 </head>
 <body>
-	<h1>125 - 15 = <%= add(125,15)%></h1>
-	<h1>17 - 21 = <%= add(17,21)%></h1>
+	<h1>125 - 15 = <%= substraction(125,15)%></h1>
+	<h1>17 - 21 = <%= substraction(17,21)%></h1>
 </body>
 </html>
 <%-- 上記の想定結果

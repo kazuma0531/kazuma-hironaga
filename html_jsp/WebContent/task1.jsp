@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>JSP KADAI</title>
 </head>
 <body>
 	<h1>Hello JSP</h1>
