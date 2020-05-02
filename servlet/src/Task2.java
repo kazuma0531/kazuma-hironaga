@@ -20,10 +20,10 @@ public class Task2 extends HttpServlet {
         super();
         
     }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		Date now = new Date();		//Dateクラスを設定
 		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy/MM/dd");	//SimpleDateFormatクラスを設定
-		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html>");

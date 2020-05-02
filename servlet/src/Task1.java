@@ -12,12 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Task1")	//URL
 public class Task1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public Task1() {
-        super();
-    }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	public Task1() {
+		super();
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");	//出力形式と文字エンコーディングを設定
+
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
@@ -30,6 +31,7 @@ public class Task1 extends HttpServlet {
 		out.println("<p>初めてのサーブレット</p>");		//行間を空ける
 		out.println("</body>");
 		out.println("</html>");
+
 	}
 }
 
