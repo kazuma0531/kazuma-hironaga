@@ -14,18 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Task4")
 public class Task4 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public Task4() {
-        super();
-        
-    }
+	public Task4() {
+		super();
+
+	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
-		
+
 		PrintWriter out = response.getWriter();
 		Random rnd =new Random();		//ランダムクラスを処理
-		String[] fortune = new String[]{"大吉","中吉","小吉","末吉","凶","大凶"};
+		String[] fortune = new String[]{"大吉", "中吉", "小吉", "末吉", "凶", "大凶"};
 		int index = rnd.nextInt(fortune.length);
 		out.println("<p>↓ 占い結果 ↓</p>");
 		out.println("<h1>" + fortune[index] + "</h1>");
