@@ -34,7 +34,7 @@ public class Task4 extends HttpServlet {
 		fortunebean.setToday(today);
 		fortunebean.setFortune(fortune);
 		//リクエストスコープにデータを格納する処理
-		request.setAttribute("占う",fortunebean);
+		request.setAttribute("uranau",fortunebean);
 		
 		request.getRequestDispatcher(PATH).forward(request, response);
 	}

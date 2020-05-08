@@ -8,17 +8,15 @@
 <head>
 <%--リクエストスコープから データを取り出す処理 --%>
 <%
-	FortuneBean fortuneBean = (FortuneBean) request.getAttribute("占う");
+	FortuneBean fortuneBean = (FortuneBean) request.getAttribute("uranau");
 %>
 <meta charset="UTF-8">
 <title>Fortune Result</title>
 </head>
 <body>
 	<%
-	if(fortuneBean != null){
 		out.println("<h1>↓" + fortuneBean.getToday() + "↓</h1>");
 		out.println("<h1>" + fortuneBean.getFortune() + "</h1>");
-	}
 	%>
 	<%-- 上記の想定結果
 	(タイトルタグ)Fortune Result
