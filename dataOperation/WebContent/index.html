@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/dataOperation/Result" method="post">
+		<p>
+			<label>名前:<input type="text" name="NAME"></label>
+		</p>
+		<p>
+			<label>性別: 男<input type="radio" name="GENDER" value="MALE">
+				女<input type="radio" name="GENDER" value="FEMALE"></label>
+		</p>
+		<p>
+			<label>お問い合わせ種類</label><br> <select name="HELP">
+				<option value="A">製品について</option>
+				<option value="B">不具合やクレーム</option>
+				<option value="C">アフターサポート</option>
+			</select>
+		</p>
+		<p>
+			<label>お問い合わせ内容</label><br>
+			<textarea name="COMEENT" rows="5" cols="30">     150文字以内で入力して下さい</textarea>
+		</p>
+		<p>
+			<label><input type="submit" value="送信する"></label>
+		</p>
+	</form>
+</body>
+</html>
