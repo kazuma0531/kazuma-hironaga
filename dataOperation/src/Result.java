@@ -23,26 +23,26 @@ public class Result extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		String textbox = request.getParameter("NAME");
-		String gender = request.getParameter("GENDER");
-		String help = request.getParameter("HELP");
-		String comeent = request.getParameter("COMEENT");
+		String textbox = request.getParameter("name");
+		String gender = request.getParameter("gender");
+		String help = request.getParameter("help");
+		String comeent = request.getParameter("comeent");
 		PrintWriter out = response.getWriter();
 
-		if (gender == null) {
+		if (null == gender) {
 			gender = "";
 		}
-		if(gender.equals("MALE")) {
+		if ("male".equals(gender)) {
 			gender = "男性";
-		}else if(gender.equals("FEMALE")){
+		} else if ("female".equals(gender)) {
 			gender = "女性";
 		}
 
-		if(help.equals("A")) {
+		if ("a".equals(help)) {
 			help = "製品について";
-		}else if(help.equals("B")){
+		} else if ("b".equals(help)) {
 			help = "不具合やクレーム";
-		}else if(help.equals("C")){
+		} else if ("c".equals(help)) {
 			help = "アフターサポート";
 		}
 		out.println("<html>");
