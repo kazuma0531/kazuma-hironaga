@@ -17,30 +17,17 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/DeleteEmployee")
 public class DeleteEmployee extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-   
-    public DeleteEmployee() {
-        super();
-        
-    }
+
+
+	public DeleteEmployee() {
+		super();
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
-		
-		PrintWriter out = response.getWriter();
-
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset=\"UTF-8\">");
-		out.println("<title>登録内容をemployeeテーブルに登録</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<h1>入力したIDの対象レコードを削除しました</h1>");
-
 
 		Connection con = null;
 		try {
@@ -58,12 +45,23 @@ public class DeleteEmployee extends HttpServlet {
 			int i = Integer.parseInt(id);
 			//条件の「?」の1番目に値を設定
 			ps.setInt(1, i);
-			
+
 			//INSERT文のSQL文を実行
 			ps.executeUpdate();
 			System.out.println("SQL文の結果の取得に成功");
 			System.out.println("ID:" + i + "のレコードを削除しました");
-			
+			PrintWriter out = response.getWriter();
+			out.println("<!DOCTYPE html>");
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<meta charset=\"UTF-8\">");
+			out.println("<title>入力したIDをSQLの対象レコードに削除</title>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("<h1>入力したIDの対象レコードを削除しました</h1>");
+			out.println("</body>");
+			out.println("</html>");
+
 			//使用が終わったら切断
 			ps.close();
 			System.out.println("使用が終わったので切断します");
@@ -89,8 +87,5 @@ public class DeleteEmployee extends HttpServlet {
 				}
 			}
 		}
-		out.println("</body>");
-		out.println("</html>");
 	}
-
 }

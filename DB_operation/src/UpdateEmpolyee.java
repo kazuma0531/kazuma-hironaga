@@ -30,18 +30,6 @@ public class UpdateEmpolyee extends HttpServlet {
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 
-		PrintWriter out = response.getWriter();
-
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset=\"UTF-8\">");
-		out.println("<title>登録内容をemployeeテーブルに登録</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<h1>入力した情報をSQLのemployeeテーブルに新しく更新しました</h1>");
-
-
 		Connection con = null;
 		try {
 			//JDBCドライバの読み込み(MYSQL)
@@ -64,6 +52,18 @@ public class UpdateEmpolyee extends HttpServlet {
 			//UPDATE文のSQL文を実行
 			ps.executeUpdate();
 			System.out.println("SQL文の結果を取得に成功");
+			
+			PrintWriter out = response.getWriter();
+			out.println("<!DOCTYPE html>");
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<meta charset=\"UTF-8\">");
+			out.println("<title>登録内容をemployeeテーブルに登録</title>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("<h1>入力した情報をSQLのemployeeテーブルに新しく更新しました</h1>");
+			out.println("</body>");
+			out.println("</html>");
 			System.out.println("ID:" + id + "に『" + name + "』が更新されました");
 			//使用が終わったら切断
 			ps.close();
@@ -89,13 +89,5 @@ public class UpdateEmpolyee extends HttpServlet {
 				}
 			}
 		}
-		out.println("</body>");
-		out.println("</html>");
 	}
 }
-
-
-
-
-
-

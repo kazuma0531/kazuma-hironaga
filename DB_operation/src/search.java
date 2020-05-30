@@ -96,5 +96,3 @@ public class search extends HttpServlet {
 		doGet(request, response);
 	}
 }
-
-	

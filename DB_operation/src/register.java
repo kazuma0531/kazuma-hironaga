@@ -33,17 +33,6 @@ public class register extends HttpServlet {
 		String name = request.getParameter("name");
 		String birthday = request.getParameter("birthday");
 		String age = request.getParameter("age");
-		PrintWriter out = response.getWriter();
-
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset=\"UTF-8\">");
-		out.println("<title>登録内容をemployeeテーブルに登録</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<h1>入力した情報をSQLのemployeeテーブルに登録しました</h1>");
-
 
 		Connection con = null;
 		try {
@@ -54,7 +43,7 @@ public class register extends HttpServlet {
 			//接続に成功した場合のメッセージ
 			System.out.println("DB接続が成功しました");
 			//SQL文の実行
-			String sql = "INSERT INTO employee(id,name,birthday,age)VALUES(?,?,?,?)";
+			String sql = "INSERT INTO employee(id, name, birthday, age)VALUES(?, ?, ?, ?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 
 			//String型をint型に変換
@@ -78,11 +67,22 @@ public class register extends HttpServlet {
 
 			//INSERT文のSQL文を実行
 			ps.executeUpdate();
+			PrintWriter out = response.getWriter();
+			out.println("<!DOCTYPE html>");
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<meta charset=\"UTF-8\">");
+			out.println("<title>登録内容をemployeeテーブルに登録</title>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("<h1>入力した情報をSQLのemployeeテーブルに登録しました</h1>");
 			System.out.println("SQL文の結果の取得に成功");
 			System.out.println("ID:" + i);
 			System.out.println("NAME:" + name);
 			System.out.println("BIRTHDAY:" + bi);
 			System.out.println("AGE:" + ag);
+			out.println("</body>");
+			out.println("</html>");
 			
 			//使用が終わったら切断
 			ps.close();
@@ -109,7 +109,5 @@ public class register extends HttpServlet {
 				}
 			}
 		}
-		out.println("</body>");
-		out.println("</html>");
 	}
 }
