@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>アカウント設定(ログインとセキュリティ)</title>
+</head>
+<body>
+
+
+	<div style="text-align: center">アカウントの名前の変更</div>
+	<br />
+	<div align="right">
+		<input type="submit" value="設定" />
+	</div>
+
+
+	<div style="text-align: center">メーリングアドレスの変更</div>
+	<br />
+	<div align="right">
+		<input type="submit" value="設定" />
+	</div>
+
+
+	<div style="text-align: center">パスワードの変更</div>
+	<br />
+	<div align="right">
+		<input type="submit" value="設定" />
+	</div>
+
+	<form action="#" th:action="@{/delete}" method="post"
+		th:object="${userForm}">
+		<div style="text-align: center">アカウントの退会</div>
+		<br />
+		<div align="right">
+			<input type="hidden" name="username" th:field="*{username}" /> 
+			<input type="submit" value="設定" />
+		</div>
+	</form>
+
+	<form action="#" th:action="@{/account}" method="post"
+		th:object="${userForm}">
+		<div align="center">
+			<input type="submit" value="アカウントの設定へ戻る" />
+		</div>
+	</form>
+
+	<form action="#" th:action="@{/}" method="get">
+		<div align="center">
+			<input type="submit" value="MYページへ戻る" />
+		</div>
+	</form>
+</body>
+</html>

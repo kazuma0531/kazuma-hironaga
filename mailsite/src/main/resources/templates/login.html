@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ログイン画面</title>
+</head>
+<body>
+	<form method="post" th:action="@{/login}">
+
+	<!-- アカウントもしくはパスワードが正しくない場合の処理を出す -->
+		<div th:if="${param.error}" class="alert alert-danger"
+			style="text-align: center" ><font color="red">アカウントまたはパスワードが正しくありません。</font></div>
+			
+		<div style="text-align: center">
+			<span style="display: inline-block; width: 120px; text-align: right">アカウント名：</span>
+
+			<input type="text" name="username" th:value="${username}"
+				required="required" autofocus="autofocus" /><br /> <span
+				style="display: inline-block; width: 100px; text-align: right">パスワード：</span>
+			<input type="password" name="password" required="required" /><br />
+			<br />
+
+			<button type="submit">ログイン</button>
+			<br />
+		</div>
+	</form>
+	<!-- TOPページに画面遷移する際はaction値に画面遷移したいメソッドを入力する -->
+	<form method="post" th:action="@{/logout}">
+		<div align="center">
+			<input type="submit" value="TOPへ戻る" />
+		</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新規登録の確認</title>
+</head>
+<body>
+	<form action="#" th:action="@{/register}" method="post"
+		　th:object="${userForm}">
+		<!-- hiddenは非表示設定　 -->
+		<input type="hidden" name="username" th:value="${userForm.username}" /><br />
+		<input type="hidden" name="password" th:value="${userForm.password}" /><br />
+
+		<div align="center">
+			入力した情報を確認します<br />
+		</div>
+		<div style="text-align: center">
+
+
+			<span>
+				<p th:text="'アカウント名：' +${userForm.username}" />
+			</span> <span>
+				<p th:text="'パスワード： *******' " />
+			</span>
+
+			<button type="submit">登録完了</button>
+			<br />
+		</div>
+	</form>
+	<form action="#" th:action="@{/signup}" method="post">
+		<!-- history.back();は戻るボタン -->
+		<div align="center">
+			<input type="submit" value="もう一度設定し直す" onclick="history.back();" />
+		</div>
+
+
+	</form>
+</body>
+</html>

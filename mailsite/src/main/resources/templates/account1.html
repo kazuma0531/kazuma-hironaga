@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>アカウント設定</title>
+</head>
+<body>
+	<!-- アカウント設定の画面 -->
+	<div style="text-align: center">アカウントの設定</div>
+	<br />
+
+	<!--メーリングリストの変更の画面に遷移する処理 -->
+	<form action="#" th:action="@{/Mail}" method="get"
+		th:object="${userForm}">
+		<div style="text-align: center">メーリングリストの変更</div>
+		<div align="right">
+			<input type="submit" value="設定" />
+		</div>
+	</form>
+
+
+	<!-- ログインとセキュリティの画面に遷移する処理 -->
+	<form action="#" th:action="@{/LoginSecurity}" method="post"
+		th:object="${userForm}">
+		<div style="text-align: center">ログインとセキュリティ</div>
+		<input type="hidden" name="username" th:field="*{username}" />
+		<div align="right">
+			<input type="submit" value="設定" />
+		</div>
+	</form>
+
+	<div style="text-align: center"></div>
+
+	<!-- MYページへ戻る処理 -->
+	<form action="#" th:action="@{/}" method="post">
+		<div align="center">
+			<input type="submit" value="MYページへ戻る" />
+		</div>
+	</form>
+</body>
+</html>

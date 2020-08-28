@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>アカウント設定(ログインとセキュリティ)アカウント削除</title>
+</head>
+<body>
+	<form action="#" th:action="@{/remove}" method="post"
+		th:object="${userForm}">
+
+
+
+		<div style="text-align: center">アカウントの削除を行うと今までのデータが削除されます。本当に削除しますか？</div>
+		<br />
+		<div align="right">
+			<input type="hidden" name="username" th:field="*{username}" /> 
+			<!-- 画面に遷移は出来るが現段階アカウントの削除は出来ない。 -->
+			<input type="submit" value="アカウントを削除する">
+
+
+		</div>
+	</form>
+
+	<form action="#" th:action="@{/account}" method="post"
+		th:object="${userForm}">
+		<div align="center">
+			<input type="submit" value="アカウントの設定へ戻る" />
+		</div>
+	</form>
+
+	<form action="#" th:action="@{/}" method="get">
+		<div align="center">
+			<input type="submit" value="MYページへ戻る" />
+		</div>
+	</form>
+</body>
+</html>

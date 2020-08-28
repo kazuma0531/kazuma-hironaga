@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>アカウント登録</title>
+</head>
+<body>
+	<form action="#" th:action="@{/check}" method="post"
+		th:object="${userForm}">
+		<div style="text-align: center">
+			<span th:errors="*{username}" style="color: red"></span><br /> <span
+				th:errors="*{password}" style="color: red"></span><br /> <span
+				style="display: inline-block; width: 120px; text-align: right">アカウント名：</span>
+			<input type="text" name="username" field="*{username}"
+				required="required" autofocus="autofocus" /><br /> <span
+				style="display: inline-block; width: 120px; text-align: right">パスワード：</span>
+			<input type="password" name="password" field="*{password}"
+				required="required" /><br /> <br /> <span
+				style="display: inline-block; width: 160px; text-align: right">パスワードの再入力：</span>
+			<input type="password" name="confilm" field="*{confilm}"
+				required="required" /><br /> <br />
+			<button type="submit">確認画面へ</button>
+		</div>
+	</form>
+	<form method="post" th:action="@{/logout}">
+		<div align="center">
+			<input type="submit" value="TOPへ戻る" />
+		</div>
+	</form>
+</body>
+</html>
+
